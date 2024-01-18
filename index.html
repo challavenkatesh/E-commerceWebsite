@@ -1,0 +1,413 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>E-commerce Website</title>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <section id="Homeid">
+      <div class="container-fluid px-0 shadow">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <a class="navbar-brand" href="#"><img src="data:image/png;base64,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" class="img-head img-fluid"/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse justify-content-center mr-5" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+              <li class="nav-item active">
+                <a class="nav-link mr-2" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ml-2 mr-2" href="product.html">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ml-2 mr-2" href="category.html">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ml-2 mr-2" href="aboutus.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ml-2 " href="contactus.html">Contact Us</a>
+              </li>
+            </ul>
+              <div class="search mr-3">
+              <a href="search.html" class="btn btn-sm btn-outline-danger">
+              Search
+              </a>
+              </div>
+              <div class="cart">
+              <a href="cart.html">
+                <a href="cart.html"> <i class="bi bi-cart3 "></i> 
+              <span class="badge badge-pill badge-danger">24</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <!--Carousel-->
+    <section>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://m.media-amazon.com/images/G/31/img2021/Sportswear_21/Jan22/ART/Stealdeals/Revised/Puma._CB647231274_.gif" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.ytimg.com/vi/-vz_JjErZ9w/maxresdefault.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.pinimg.com/originals/ba/2d/a8/ba2da80bbb9f3f04c7c5ca3659aeb419.gif" class="d-block w-100" alt="...">
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+    <!--Header Section-->
+    <section class="shop_by_category py-5 my-5 bg-main-head-color" id="shop_by_category">
+      <div class="container-fluid">
+      <div class="section_title text-center mb-5">
+      <h1 class="text-capitalize">Shop By category</h1>
+      </div>
+      <div class="row">
+      <div class="col-md-4 col-12 mt-3">
+      <div class="card bg-dark text-white">
+      <a href="category.html">
+      <img class="card-img img  img-shop-1 " src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/524251ff827149cab708af77005f806b_9366/MILYENL_TENNIS_STAR_SHOES_Yellow_GC0710_01_standard.jpg"
+      alt="Card image">
+      </a>
+      </div>
+      </div>
+      <div class="col-md-4 col-12 mt-small-5 mb-small-5 mt-3">
+      <div class="card bg-dark text-white">
+      <a href="category.html">
+      <img class="card-img img  img-shop-2 " src="https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/4/b/6/-original-imagtajgycpmh6qz.jpeg?q=90&crop=false"
+      alt="Card image">
+      </a>
+      </div>
+      </div>
+      <div class="col-md-4 col-12 mt-3">
+      <div class="card bg-dark text-white">
+      <a href="category.html">
+      <img class="card-img img  img-shop-3 " src="https://www.jiomart.com/images/product/original/469312433_grey/men-faztcort-indoor-star-performance-shoes-model3-469312433_grey-3-202309302030.jpg?im=Resize=(500,630)"
+      alt="Card image">
+      </a>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section>
+      <!-- ==============shop by category ends here============== -->
+      <!-- ==============products starts here============== -->
+<section class="products py-5 my-5 bg-light" id="products">
+  <div class="container ">
+  <div class="section_title text-center mb-5">
+  <h1 class="text-capitalize">Latest Products</h1>
+  </div>
+  <div class="row mb-5">
+  <div class="col-md-4 col-12">
+  <div class="single_product shadow text-center p-1">
+  <div class="product_img">
+  <a href="product_detail.html"><img src="https://www.tresmode.com/cdn/shop/articles/Tan_Shoes_Banner_Image_2_1600x.jpg?v=1697807154"
+  class="img img-fluid" alt=""></a>
+  <div class="new_product">
+  <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+  </div>
+  </div>
+  <div class="product-caption my-3">
+  <div class="product-ratting">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="far fa-star low-star"></i>
+    <i class="far fa-star low-star"></i>
+  </div>
+  <h4><a href="product_detail.html">Green Dress with details</a></h4>
+  <div class="price">
+  <b><span class="mr-1">₹</span><span>400</span></b>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-12">
+  <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
+  <div class="product_img">
+  <a href="product_detail.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx0tOUy4UFNt1v4TQJnTfvHz4MzJelAg6ln2O-qD2PsnWVXhd_l98xAAHPnd7r3uE7JD0&usqp=CAU"
+  class="img img-product-1" alt=""></a>
+  <div class="new_product">
+  <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+  </div>
+  </div>
+  <div class="product-caption my-3">
+  <div class="product-ratting">
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star low-star"></i>
+  <i class="far fa-star low-star"></i>
+  </div>
+  <h4><a href="product_detail.html">Green Dress with details</a></h4>
+  <div class="price">
+  <b><span class="mr-1">₹</span><span>400</span></b>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-12">
+  <div class="single_product shadow text-center p-1">
+  <div class="product_img">
+  <a href="product_detail.html"><img src="https://pbs.twimg.com/media/FBLJVscUUAQ1in1.jpg"
+  class="img img-product-1 " alt=""></a>
+  <div class="new_product">
+  <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+  </div>
+  </div>
+  <div class="product-caption my-3">
+  <div class="product-ratting">
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star low-star"></i>
+  <i class="far fa-star low-star"></i>
+  </div>
+  <h4><a href="product_detail.html">Green Dress with details</a></h4>
+  <div class="price">
+  <b><span class="mr-1">₹</span><span>400</span></b>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="row mt-5">
+  <div class="col-md-4 col-12">
+  <div class="single_product shadow text-center p-1">
+  <div class="product_img">
+  <a href="product_detail.html"><img src="data:image/jpeg;base64,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"
+  class="img img-fluid" alt=""></a>
+  <div class="new_product">
+  <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+  </div>
+  </div>
+  <div class="product-caption my-3">
+  <div class="product-ratting">
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star low-star"></i>
+  <i class="far fa-star low-star"></i>
+  </div>
+  <h4><a href="product_detail.html">Green Dress with details</a></h4>
+  <div class="price">
+  <b><span class="mr-1">₹</span><span>400</span></b>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-12">
+  <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
+  <div class="product_img">
+  <a href="product_detail.html"><img src="https://i.ytimg.com/vi/FjEdc9HAJXo/maxresdefault.jpg"
+  class="img img-product-1" alt=""></a>
+  <div class="new_product">
+  <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+  </div>
+  </div>
+  <div class="product-caption my-3">
+  <div class="product-ratting">
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star low-star"></i>
+  <i class="far fa-star low-star"></i>
+  </div>
+  <h4><a href="product_detail.html">Green Dress with details</a></h4>
+  <div class="price">
+  <b><span class="mr-1">₹</span><span>400</span></b>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-12">
+  <div class="single_product shadow text-center p-1">
+  <div class="product_img">
+  <a href="product_detail.html"><img src="https://res.cloudinary.com/dwh5kmuox/images/f_auto,q_auto/v1596185711/Blog-Header-Buy-More-than-just-a-shoe/Blog-Header-Buy-More-than-just-a-shoe.jpg?_i=AA"
+  class="img img-product-1" alt=""></a>
+  <div class="new_product">
+  <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+  </div>
+  </div>
+  <div class="product-caption my-3">
+  <div class="product-ratting">
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star"></i>
+  <i class="far fa-star low-star"></i>
+  <i class="far fa-star low-star"></i>
+  </div>
+  <h4><a href="product_detail.html">Green Dress with details</a></h4>
+  <div class="price">
+  <b><span class="mr-1">₹</span><span>400</span></b>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  <!-- ==============products ends here============== -->
+  <!-- ==============feature starts here============== -->
+<section class="feature py-5 mt-5 bg-color-2" id="feature">
+  <div class="container">
+  <div class="section_title text-center mb-5">
+  <h1 class="text-capitalize">Our Features</h1>
+  </div>
+  <div class="row text-white bg-color">
+  <div class="col-md-4 col-12 shadow p-3">
+  <div class="text-center">
+  <div class="mb-4">
+  <i class="fas fa-shipping-fast fa-3x mb-3 pt-2"></i>
+  <div>
+  <h3>Free Shipping Method</h3>
+  </div>
+  </div>
+  <div>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos impedit id
+  accusamus quas maxime
+  expedita nostrum atque delectus deleniti ad modi repellat debitis ipsam
+  quisquam amet, odit voluptate
+  recusandae distinctio? Perferendis tenetur quibusdam porro dolor dignissimos
+  id magnam debitis vitae?
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-12 shadow p-3 mt-small-5 mb-small-5">
+  <div class="text-center">
+  <div class="mb-4">
+  <i class="fas fa-lock fa-3x mb-3 pt-2"></i>
+  <div>
+  <h3>Secure Payment System</h3>
+  </div>
+  </div>
+  <div>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos impedit id
+  accusamus quas maxime
+  expedita nostrum atque delectus deleniti ad modi repellat debitis ipsam
+  quisquam amet, odit voluptate
+  recusandae distinctio? Perferendis tenetur quibusdam porro dolor dignissimos
+  id magnam debitis vitae?
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-12 shadow p-3">
+  <div class="text-center">
+  <div class="mb-4">
+  <i class="fas fa-headphones fa-3x mb-3 pt-2"></i>
+  <div>
+  <h3>24/7 Support</h3>
+  </div>
+  </div>
+  <div>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos impedit id
+  accusamus quas maxime
+  expedita nostrum atque delectus deleniti ad modi repellat debitis ipsam
+  quisquam amet, odit voluptate
+  recusandae distinctio? Perferendis tenetur quibusdam porro dolor dignissimos
+  id magnam debitis vitae?
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  <!-- ==============feature ends here============== -->
+  <!-- ==============footer starts here============== -->
+<section class="footer_section pt-5 pb-2" id="footer_section">
+  <footer>
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-md-3 col-6 pl-5 pl-small-15">
+  <div class="footer_title">
+  <a href="index.html"><img src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/40-Famous-Shoe-Logos/Droors-Clothing.png" width="150px"
+    class="img-head img-fluid" alt="logo"></a>
+  </div>
+  <div>
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, totam est
+  illum ipsum quas ad
+  dignissimos magni veritatis natus voluptatem.
+  </div>
+  </div>
+  <div class="col-md-3 col-6">
+  <div class="footer_title pt-3 mb-3">
+  <h3>Quick Links</h3>
+  </div>
+  <div class="footer_links">
+  <ul>
+  <li><a href="about.html">About</a></li>
+  <li><a href="javascript:;">Offers & Discounts</a></li>
+  <li><a href="javascript:;">Get Coupon</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="col-md-3 col-6">
+  <div class="footer_title pt-3 mb-3">
+  <h3>New Products</h3>
+  </div>
+  <div class="footer_links">
+  <ul>
+  <li><a href="javascript:;">Woman Cloth</a></li>
+  <li><a href="javascript:;">Fashion Accessories</a></li>
+  <li><a href="javascript:;">Man Accessories</a></li>
+  <li><a href="javascript:;">Rubber made Toys</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="col-md-3 col-6">
+  <div class="footer_title pt-3 mb-3">
+  <h3>Support</h3>
+  </div>
+  <div class="footer_links">
+  <ul>
+  <li><a href="javascript:;">Frequently Asked Questions</a></li>
+  <li><a href="javascript:;">Terms & Conditions</a></li>
+  <li><a href="javascript:;">Privacy Policy</a></li>
+  <li><a href="javascript:;">Report a Payment Issue</a></li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="border-top">
+  <h6 class="text-center mt-3">Copyright ©2020 All rights reserved
+  </h6>
+  </div>
+  </footer>
+  </section>
+  <div class="backtop">
+  <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+  <i class="fas fa-chevron-up text-dark"></i>
+  </a>
+  </div>
+  <!-- ==============footer ends here============== -->  
+</body>
+</html>
